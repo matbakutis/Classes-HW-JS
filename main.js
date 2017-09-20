@@ -31,6 +31,31 @@ sparky.chaseTail();
 console.log(sparky.getPrice());
 
 
+class Cat extends Pet {
+	constructor(price, name){
+		super(name);
+		this.price = price;
+	}
+	purr(){
+		console.log("Purrrr");
+	}
+	clean(){
+		console.log("Cleaning");
+	}
+	getPrice(){
+		return this.price;
+	}	
+};
+
+
+const sprinkles = new Cat("$200", "Sprinkles");
+sprinkles.purr();
+sprinkles.clean();
+console.log(sprinkles.getPrice());
+
+
+
+
 
 
 
