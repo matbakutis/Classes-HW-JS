@@ -107,11 +107,46 @@ jill.buyPet(sprinkles);
 console.log(jill);
 
 
+class Shoe {
+	constructor(serialNum){
+	this.serialNum = serialNum;
+	}
+};
+
+const factory = {
+	arr: [],
+	generateShoes(){
+		const newShoe = new Shoe(arr.length);
+		arr.push(newShoe);
+	}
+};
 
 
+class Store {
+	constructor(mallName, serialNum){
+		this.mallName = mallName;
+		this.serialNum = serialNum;
+	}
+};
 
+class Mall {
+	constructor(mallName){
+		this.mallName = mallName;
+		this.arr = [];
+	}
+	generateStore(){
+		const newStore = new Store(this.mallName, this.arr.length);
+		this.arr.push(newStore);
+	}
+};
 
-
+const mall = new Mall("Mall of America");
+mall.generateStore();
+mall.generateStore();
+mall.generateStore();
+mall.generateStore();
+mall.generateStore();
+console.log(mall);
 
 
 
